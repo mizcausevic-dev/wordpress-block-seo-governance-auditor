@@ -33,7 +33,7 @@ It focuses on the real WordPress content problem:
 ## Local development
 
 ```powershell
-Set-Location "C:\Users\chaus\dev\repos\wordpress-block-seo-governance-auditor"
+cd wordpress-block-seo-governance-auditor
 php -S 127.0.0.1:5172 router.php
 ```
 

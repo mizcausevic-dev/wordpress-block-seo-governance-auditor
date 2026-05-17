@@ -1,0 +1,105 @@
+<?php
+
+declare(strict_types=1);
+
+return [
+    'pages' => [
+        [
+            'slug' => '/kitchen-backsplash-ideas',
+            'title' => 'Kitchen Backsplash Ideas',
+            'owner' => 'Editorial',
+            'status' => 'breaking',
+            'headingScore' => 54,
+            'answerScore' => 48,
+            'schemaScore' => 32,
+            'leadIssue' => 'Accordion and heading hierarchy are flattening the page into weak answer fragments.',
+            'nextAction' => 'Restore heading order and add question-led block copy with stronger factual support.',
+            'blocks' => ['core/heading', 'core/group', 'yoast/faq-block', 'core/image'],
+        ],
+        [
+            'slug' => '/peel-and-stick-backsplash-installation',
+            'title' => 'Peel and Stick Backsplash Installation',
+            'owner' => 'Support content',
+            'status' => 'watch',
+            'headingScore' => 78,
+            'answerScore' => 74,
+            'schemaScore' => 69,
+            'leadIssue' => 'Good procedural structure, but FAQ answers are shorter than the surrounding install steps.',
+            'nextAction' => 'Expand the FAQ block with richer install caveats and material constraints.',
+            'blocks' => ['core/heading', 'core/list', 'yoast/faq-block', 'core/table'],
+        ],
+        [
+            'slug' => '/tile-sizing-guide',
+            'title' => 'Tile Sizing Guide',
+            'owner' => 'SEO content',
+            'status' => 'healthy',
+            'headingScore' => 88,
+            'answerScore' => 84,
+            'schemaScore' => 81,
+            'leadIssue' => 'Strong heading flow and concise comparison blocks keep the surface answer-safe.',
+            'nextAction' => 'Preserve the current structure and refresh measurements quarterly.',
+            'blocks' => ['core/heading', 'core/table', 'core/columns', 'rankmath/faq'],
+        ],
+        [
+            'slug' => '/renter-friendly-backsplash',
+            'title' => 'Renter Friendly Backsplash',
+            'owner' => 'Growth content',
+            'status' => 'breaking',
+            'headingScore' => 51,
+            'answerScore' => 45,
+            'schemaScore' => 28,
+            'leadIssue' => 'List-heavy blocks and promotional copy are outrunning the actual answer surface.',
+            'nextAction' => 'Rewrite the intro and section headings around practical renter constraints and removal safety.',
+            'blocks' => ['core/cover', 'core/list', 'core/buttons', 'core/image'],
+        ],
+        [
+            'slug' => '/backsplash-cleaning-faq',
+            'title' => 'Backsplash Cleaning FAQ',
+            'owner' => 'Support content',
+            'status' => 'healthy',
+            'headingScore' => 91,
+            'answerScore' => 87,
+            'schemaScore' => 86,
+            'leadIssue' => 'The block stack is concise, factual, and already aligned with FAQ answer retrieval.',
+            'nextAction' => 'Keep the current structure and refresh product-safe cleaning notes as materials change.',
+            'blocks' => ['core/heading', 'core/paragraph', 'yoast/faq-block', 'core/separator'],
+        ],
+    ],
+    'schemaOpportunities' => [
+        [
+            'surface' => '/kitchen-backsplash-ideas',
+            'opportunity' => 'FAQPage + HowTo split',
+            'reason' => 'The current page mixes inspiration and task guidance without clear schema boundaries.',
+            'owner' => 'Editorial',
+        ],
+        [
+            'surface' => '/renter-friendly-backsplash',
+            'opportunity' => 'FAQPage expansion',
+            'reason' => 'Renter questions are present, but they are not packaged into answer-safe question blocks.',
+            'owner' => 'Growth content',
+        ],
+        [
+            'surface' => '/tile-sizing-guide',
+            'opportunity' => 'DefinedTermSet support',
+            'reason' => 'Sizing terminology is strong enough to support glossary-style entity reinforcement.',
+            'owner' => 'SEO content',
+        ],
+    ],
+    'verificationLanes' => [
+        [
+            'lane' => 'Heading discipline',
+            'score' => 72,
+            'note' => 'Most pages are structurally usable, but promotional long-form pages still flatten hierarchy.',
+        ],
+        [
+            'lane' => 'Answer-surface depth',
+            'score' => 68,
+            'note' => 'Instructional pages do better than inspirational pages because they answer clearer questions.',
+        ],
+        [
+            'lane' => 'Schema coverage',
+            'score' => 59,
+            'note' => 'FAQ and glossary opportunities are still underused at the block level.',
+        ],
+    ],
+];
